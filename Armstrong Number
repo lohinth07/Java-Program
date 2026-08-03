@@ -1,0 +1,15 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int temp=n,sum=0;
+        int count=String.valueOf(n).length();
+        while(temp>0){
+            int d=temp%10;
+            sum+=(int)Math.pow(d,count);
+            temp/=10;
+        }
+    System.out.println(sum==n? "Armstrong":"Not Armstrong");
+    }
+}
